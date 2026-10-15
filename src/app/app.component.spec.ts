@@ -1,10 +1,11 @@
 import { TestBed } from '@angular/core/testing';
+import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppModule],
     }).compileComponents();
   });
 
@@ -24,6 +25,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, mycv');
+    expect(compiled.querySelector('table')).toBeTruthy();
   });
 });

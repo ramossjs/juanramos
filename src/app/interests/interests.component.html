@@ -1,0 +1,7 @@
+<h2>Interests</h2>
+<ul>
+	<li *ngFor="let interest of interests">
+		<strong>{{ interest.name }}</strong> ({{ interest.category }})<br>
+		{{ interest.year || interest.since || interest.instruments }}
+	</li>
+</ul>

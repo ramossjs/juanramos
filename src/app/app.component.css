@@ -1,0 +1,16 @@
+.cv-grid {
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.cv-grid td {
+	border: 1px solid #333;
+	padding: 1rem;
+	vertical-align: top;
+	width: 50%;
+}
+
+.cv-grid tr:first-child td {
+	width: 100%;
+}
