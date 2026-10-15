@@ -25,6 +25,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('table')).toBeTruthy();
+    expect(compiled.querySelector('main.cv-shell')).toBeTruthy();
   });
 });
