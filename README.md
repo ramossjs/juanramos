@@ -14,6 +14,18 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Docker
+
+Build and run the production image locally:
+
+```bash
+docker build -t mycv:local .
+docker rm -f angular-app 2>/dev/null || true
+docker run -d --name angular-app -p 8081:80 mycv:local
+```
+
+Open `http://localhost:8081/`. The Docker build uses `/` as Angular's base path because the application is served from the web server root. GitHub Pages uses a separate `docs` build with `/juanramos/`.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
