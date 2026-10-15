@@ -1,20 +1,26 @@
-<table class="cv-grid">
+<main class="cv-shell">
+  <section class="profile-card">
+    <app-header></app-header>
+  </section>
 
-  <tr>
-    <td colspan="2"><app-header></app-header></td>
-  </tr>
-  <tr>
-    <td><app-work-experience></app-work-experience></td>
-    <td><app-skills></app-skills></td>
-  </tr>
-
-  <tr>
-    <td><app-education></app-education></td>
-    <td><app-certificates></app-certificates></td>
-  </tr>
-
-  <tr>
-    <td><app-languages></app-languages></td>
-    <td><app-interests></app-interests></td>
-  </tr>
-</table>
+  <div class="content-grid">
+    <section class="cv-card experience-card">
+      <app-work-experience></app-work-experience>
+    </section>
+    <section class="cv-card">
+      <app-skills></app-skills>
+    </section>
+    <section class="cv-card">
+      <app-education></app-education>
+    </section>
+    <section class="cv-card">
+      <app-certificates></app-certificates>
+    </section>
+    <section class="cv-card">
+      <app-languages></app-languages>
+    </section>
+    <section class="cv-card">
+      <app-interests></app-interests>
+    </section>
+  </div>
+</main>

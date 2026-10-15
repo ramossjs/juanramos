@@ -1,15 +1,16 @@
 <div class="header-content">
-    <div>
-        {{header.name}} <br>
-        {{header.goalLife}}
+    <div class="identity">
+        <span class="eyebrow">CURRICULUM VITAE</span>
+        <h1>{{header.name}}</h1>
+        <p>{{header.goalLife}}</p>
     </div>
     <div>
-        <img [src]="header.photoURL" width="200" height="200">
+        <img class="profile-photo" [src]="header.photoURL" width="200" height="200" alt="Foto de {{header.name}}">
     </div>
-    <div>
-        {{header.email}} <br>
-        {{header.phoneNumber}} <br>
-        {{header.location}} <br>
-        {{header.socialNetwork}}
+    <div class="contact-list">
+        <a [href]="'mailto:' + header.email">{{header.email}}</a>
+        <span>{{header.phoneNumber}}</span>
+        <span>{{header.location}}</span>
+        <span>{{header.socialNetwork}}</span>
     </div>
 </div>

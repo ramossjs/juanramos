@@ -1,16 +1,59 @@
-.cv-grid {
-	border-collapse: collapse;
-	table-layout: fixed;
-	width: 100%;
+.cv-shell {
+	margin: 0 auto;
+	max-width: 1120px;
+	padding: 2rem 1.25rem 3rem;
 }
 
-.cv-grid td {
-	border: 1px solid #333;
-	padding: 1rem;
-	vertical-align: top;
-	width: 50%;
+.profile-card {
+	background: linear-gradient(135deg, #123047 0%, #1b5263 100%);
+	border-radius: 1.5rem;
+	box-shadow: 0 1.25rem 3rem rgba(18, 48, 71, 0.2);
+	color: #f7fbfc;
+	overflow: hidden;
+	position: relative;
 }
 
-.cv-grid tr:first-child td {
-	width: 100%;
+.profile-card::after {
+	background: #f27c6b;
+	border-radius: 50%;
+	content: "";
+	height: 13rem;
+	opacity: 0.8;
+	position: absolute;
+	right: -4rem;
+	top: -5rem;
+	width: 13rem;
+}
+
+.content-grid {
+	display: grid;
+	gap: 1.25rem;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	margin-top: 1.25rem;
+}
+
+.cv-card {
+	background: #ffffff;
+	border: 1px solid #e2edf0;
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 1.5rem rgba(18, 48, 71, 0.07);
+	padding: 1.5rem;
+}
+
+.experience-card {
+	grid-row: span 2;
+}
+
+@media (max-width: 700px) {
+	.cv-shell {
+		padding: 1rem 0.75rem 2rem;
+	}
+
+	.content-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.experience-card {
+		grid-row: auto;
+	}
 }
